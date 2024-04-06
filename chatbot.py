@@ -1,7 +1,7 @@
 import openai
 import gradio as gr
 
-openai.api_key = "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"
+openai.api_key = "your api key"
 
 
 
@@ -23,7 +23,7 @@ def CustomChatGPT(location,duration):
     messages.append({"role": "assistant", "content": ChatGPT_reply})
     return ChatGPT_reply
 
-location= gr.Button("hello")
+location= gr.Textbox(label="Destination")
 duration= gr.Textbox(label="No of days")
 btn = gr.Button(value="Submit")
 #location_radio = gr.Radio(["Manali", "Shimla"], label="Select Location", default=None, name="location", horizontal=True)
